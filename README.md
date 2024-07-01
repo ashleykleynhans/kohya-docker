@@ -10,7 +10,7 @@
 ## Installs
 
 * Ubuntu 22.04 LTS
-* CUDA 11.8
+* CUDA 12.1
 * Python 3.10.12
 * Torch 2.1.2
 * xformers 0.0.23.post1

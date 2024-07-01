@@ -15,7 +15,7 @@ variable "RELEASE" {
 }
 
 variable "CU_VERSION" {
-    default = "118"
+    default = "121"
 }
 
 variable "BASE_IMAGE_REPOSITORY" {
@@ -23,11 +23,11 @@ variable "BASE_IMAGE_REPOSITORY" {
 }
 
 variable "BASE_IMAGE_VERSION" {
-    default = "1.4.0"
+    default = "1.6.0"
 }
 
 variable "CUDA_VERSION" {
-    default = "11.8.0"
+    default = "12.1.1"
 }
 
 variable "TORCH_VERSION" {
@@ -36,7 +36,7 @@ variable "TORCH_VERSION" {
 
 target "default" {
     dockerfile = "Dockerfile"
-    tags = ["${REGISTRY}/${REGISTRY_USER}/${APP}:${RELEASE}"]
+    tags = ["${REGISTRY}/${REGISTRY_USER}/${APP}:${RELEASE}-dev"]
     args = {
         RELEASE = "${RELEASE}"
         BASE_IMAGE = "${BASE_IMAGE_REPOSITORY}:${BASE_IMAGE_VERSION}-cuda${CUDA_VERSION}-torch${TORCH_VERSION}"
@@ -44,6 +44,6 @@ target "default" {
         TORCH_VERSION = "2.1.2+cu${CU_VERSION}"
         XFORMERS_VERSION = "0.0.23.post1+cu${CU_VERSION}"
         KOHYA_VERSION = "v${RELEASE}"
-        APP_MANAGER_VERSION = "1.0.2"
+        APP_MANAGER_VERSION = "1.1.0"
     }
 }
