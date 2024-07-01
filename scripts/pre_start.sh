@@ -30,7 +30,7 @@ sync_apps() {
 link_models() {
     # Link model if its not already linked
     if [[ ! -L /workspace/sd_xl_base_1.0.safetensors ]]; then
-        ln -s /sd-models/sd_xl_base_1.0.safetensors /workspace/sd_xl_base_1.0.safetensors
+        ln -s /sd-models/sd_xl_base_1.0.safetensors /workspace/kohya_ss/models/sd_xl_base_1.0.safetensors
     fi
 }
 
