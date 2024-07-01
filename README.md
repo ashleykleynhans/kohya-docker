@@ -14,7 +14,8 @@
 * Python 3.10.12
 * Torch 2.1.2
 * xformers 0.0.23.post1
-* Jupyter Lab
+* [Jupyter Lab](https://github.com/jupyterlab/jupyterlab)
+* [code-server](https://github.com/coder/code-server)
 * [Kohya_ss](https://github.com/bmaltais/kohya_ss) v24.1.4
 * [runpodctl](https://github.com/runpod/runpodctl)
 * [OhMyRunPod](https://github.com/kodxana/OhMyRunPod)
@@ -71,6 +72,7 @@ docker run -d \
   -v /workspace \
   -p 3000:3001 \
   -p 8000:8000 \
+  -p 7777:7777 \
   -p 8888:8888 \
   -p 2999:2999 \
   ashleykza/kohya:latest
@@ -84,6 +86,7 @@ You can obviously substitute the image name and tag with your own.
 |--------------|---------------|----------------------|
 | 3000         | 3001          | Kohya_ss             |
 | 8000         | 8000          | Application Manager  |
+| 7777         | 7777          | Code Server          |
 | 8888         | 8888          | Jupyter Lab          |
 | 2999         | 2999          | RunPod File Uploader |
 
@@ -92,7 +95,7 @@ You can obviously substitute the image name and tag with your own.
 | Variable             | Description                                      | Default               |
 |----------------------|--------------------------------------------------|-----------------------|
 | JUPYTER_LAB_PASSWORD | Set a password for Jupyter lab                   | not set - no password |
-| DISABLE_AUTOLAUNCH   | Disable Kohya_ss from launching automaticall y   | (not set)             |
+| DISABLE_AUTOLAUNCH   | Disable Kohya_ss from launching automatically    | (not set)             |
 | DISABLE_SYNC         | Disable syncing if using a RunPod network volume | (not set)             |
 
 ## Logs
@@ -116,6 +119,11 @@ tail -f /workspace/logs/kohya_ss.log
    of the [container](https://github.com/runpod/containers) code.
 2. [Bernard Maltais](https://github.com/bmaltais) (core developer of Kohya_ss)
    for assisting with optimizing the Docker image.
+3. [Madiator2011](https://github.com/kodxana) for advice
+   and suggestions on improving these images, as well as all of the code for the
+   code-server which was borrowed from his [madiator-docker-runpod](
+   https://github.com/kodxana/madiator-docker-runpod) GitHub repository.
+
 
 ## Community and Contributing
 
