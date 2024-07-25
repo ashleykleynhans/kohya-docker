@@ -115,11 +115,9 @@ tail -f /workspace/logs/kohya_ss.log
 
 ## Acknowledgements
 
-1. [RunPod](https://runpod.io?ref=2xxro4sy) for providing most
-   of the [container](https://github.com/runpod/containers) code.
-2. [Bernard Maltais](https://github.com/bmaltais) (core developer of Kohya_ss)
+1. [Bernard Maltais](https://github.com/bmaltais) (core developer of Kohya_ss)
    for assisting with optimizing the Docker image.
-3. [Madiator2011](https://github.com/kodxana) for advice
+2. [Madiator2011](https://github.com/kodxana) for advice
    and suggestions on improving these images, as well as all of the code for the
    code-server which was borrowed from his [madiator-docker-runpod](
    https://github.com/kodxana/madiator-docker-runpod) GitHub repository.
