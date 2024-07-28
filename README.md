@@ -75,6 +75,7 @@ docker run -d \
   -p 7777:7777 \
   -p 8888:8888 \
   -p 2999:2999 \
+  -e ENABLE_TENSORBOARD=1 \
   ashleykza/kohya:latest
 ```
 
@@ -85,6 +86,7 @@ You can obviously substitute the image name and tag with your own.
 | Connect Port | Internal Port | Description          |
 |--------------|---------------|----------------------|
 | 3000         | 3001          | Kohya_ss             |
+| 6006         | 6066          | Tensorboard          |
 | 8000         | 8000          | Application Manager  |
 | 7777         | 7777          | Code Server          |
 | 8888         | 8888          | Jupyter Lab          |
@@ -97,6 +99,7 @@ You can obviously substitute the image name and tag with your own.
 | JUPYTER_LAB_PASSWORD | Set a password for Jupyter lab                   | not set - no password |
 | DISABLE_AUTOLAUNCH   | Disable Kohya_ss from launching automatically    | (not set)             |
 | DISABLE_SYNC         | Disable syncing if using a RunPod network volume | (not set)             |
+| ENABLE_TENSORBOARD   | Enables Tensorboard on port 6006                 | enabled               |
 
 ## Logs
 
@@ -121,7 +124,6 @@ tail -f /workspace/logs/kohya_ss.log
    and suggestions on improving these images, as well as all of the code for the
    code-server which was borrowed from his [madiator-docker-runpod](
    https://github.com/kodxana/madiator-docker-runpod) GitHub repository.
-
 
 ## Community and Contributing
 
