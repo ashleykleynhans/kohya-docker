@@ -47,8 +47,7 @@ RUN python3 -m venv --system-site-packages /venv && \
 FROM kohya-install AS tensorboard-install
 WORKDIR /
 RUN pip3 uninstall -y tensorboard tb-nightly && \
-    pip3 install tensorboard==2.15.2 tensorflow==2.15.0.post1 && \
-    pip3 cache purge
+    pip3 install tensorboard==2.15.2 tensorflow==2.15.0.post1
 
 # Stage 4: Application Manager Installation
 FROM tensorboard-install AS appmanager-install
