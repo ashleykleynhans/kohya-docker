@@ -1,6 +1,6 @@
 # Stage 1: Base Image
 ARG BASE_IMAGE=ashleykza/runpod-base:2.1.1-python3.10-cuda12.1.1-torch2.1.2
-FROM ${BASE_IMAGE} as base
+FROM ${BASE_IMAGE} AS base
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 ENV DEBIAN_FRONTEND=noninteractive \
@@ -40,7 +40,6 @@ RUN python3 -m venv --system-site-packages /venv && \
         wheel packaging tensorrt && \
     pip3 install tensorflow[and-cuda] && \
     pip3 install -r requirements.txt && \
-    pip3 cache purge && \
     deactivate
 
 # Stage 3: Tensorboard Installation
