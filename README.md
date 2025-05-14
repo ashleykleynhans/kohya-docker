@@ -10,19 +10,18 @@
 ## Installs
 
 * Ubuntu 22.04 LTS
-* CUDA 12.1
+* CUDA 12.4
 * Python 3.10.12
-* Torch 2.1.2
-* xformers 0.0.23.post1
+* Torch 2.5.0
+* xformers 0.0.28.post2
 * [Jupyter Lab](https://github.com/jupyterlab/jupyterlab)
 * [code-server](https://github.com/coder/code-server)
-* [Kohya_ss](https://github.com/bmaltais/kohya_ss) v24.1.6
+* [Kohya_ss](https://github.com/bmaltais/kohya_ss) v25.0.3
 * [runpodctl](https://github.com/runpod/runpodctl)
 * [OhMyRunPod](https://github.com/kodxana/OhMyRunPod)
 * [RunPod File Uploader](https://github.com/kodxana/RunPod-FilleUploader)
 * [rclone](https://rclone.org/)
 * [Application Manager](https://github.com/ashleykleynhans/app-manager)
-* sd_xl_base_1.0.safetensors
 
 ## Available on RunPod
 
