@@ -29,11 +29,8 @@ RUN python3 -m venv --system-site-packages /venv && \
     source /venv/bin/activate && \
     pip3 install torch==${TORCH_VERSION} torchvision torchaudio --index-url ${INDEX_URL} && \
     pip3 install xformers==${XFORMERS_VERSION} --index-url ${INDEX_URL} && \
-    pip3 install bitsandbytes==0.43.0 \
-        tensorboard==2.15.2 tensorflow==2.15.0.post1 \
-        wheel packaging tensorrt && \
     pip3 install tensorflow[and-cuda] && \
-    pip3 install -r requirements.txt && \
+    pip3 install -r requirements_runpod.txt && \
     deactivate
 
 # Stage 3: Tensorboard Installation

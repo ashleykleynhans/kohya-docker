@@ -45,7 +45,7 @@ target "default" {
         RELEASE = "${RELEASE}"
         BASE_IMAGE = "${BASE_IMAGE_REPOSITORY}:${BASE_IMAGE_VERSION}-python${PYTHON_VERSION}-cuda${CUDA_VERSION}-torch${TORCH_VERSION}"
         INDEX_URL = "https://download.pytorch.org/whl/cu${CU_VERSION}"
-        TORCH_VERSION = "2.1.2+cu${CU_VERSION}"
+        TORCH_VERSION = "${TORCH_VERSION}+cu${CU_VERSION}"
         XFORMERS_VERSION = "0.0.28.post2"
         KOHYA_VERSION = "v${RELEASE}"
         APP_MANAGER_VERSION = "1.2.2"
