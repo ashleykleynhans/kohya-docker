@@ -2,7 +2,7 @@ torch==2.6.0+cu124
 torchvision==0.21.0+cu124
 xformers==0.0.29.post3
 
-bitsandbytes==0.44.0
+bitsandbytes==0.45.5
 tensorboard==2.15.2
 tensorflow==2.15.0.post1
 wheel
