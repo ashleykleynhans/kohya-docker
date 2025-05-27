@@ -12,11 +12,11 @@
 * Ubuntu 22.04 LTS
 * CUDA 12.4
 * Python 3.10.12
-* Torch 2.5.0
-* xformers 0.0.28.post2
+* Torch 2.6.0
+* xformers 0.0.29.post3
 * [Jupyter Lab](https://github.com/jupyterlab/jupyterlab)
 * [code-server](https://github.com/coder/code-server)
-* [Kohya_ss](https://github.com/bmaltais/kohya_ss) v25.1.0
+* [Kohya_ss](https://github.com/bmaltais/kohya_ss) v25.1.2
 * [runpodctl](https://github.com/runpod/runpodctl)
 * [OhMyRunPod](https://github.com/kodxana/OhMyRunPod)
 * [RunPod File Uploader](https://github.com/kodxana/RunPod-FilleUploader)
