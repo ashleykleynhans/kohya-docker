@@ -27,10 +27,10 @@
 
 This image is designed to work on [Runpod](https://runpod.io?ref=2xxro4sy).
 
-| Template Version                                                                              | Template Description                                       |
-|-----------------------------------------------------------------------------------------------|------------------------------------------------------------|
-| [CUDA 12.4 template](https://runpod.io/console/deploy?template=uajca40f1z&ref=2xxro4sy)       | Default template with CUDA 12.4 for non-RTX 5090 GPU types |
-| [CUDA 12.8 template](https://runpod.io/console/deploy?template=8y5a02q55r&ref=2xxro4sy) | Default template with CUDA 12.8 for RTX 5090 GPU type      |
+| Template Version                                                                        | Template Description                               |
+|-----------------------------------------------------------------------------------------|----------------------------------------------------|
+| [CUDA 12.4 template](https://runpod.io/console/deploy?template=uajca40f1z&ref=2xxro4sy) | Template with CUDA 12.4 for non-RTX 5090 GPU types |
+| [CUDA 12.8 template](https://runpod.io/console/deploy?template=8y5a02q55r&ref=2xxro4sy) | Template with CUDA 12.8 for RTX 5090 GPU type      |
 
 
 ## Building the Docker image
