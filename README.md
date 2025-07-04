@@ -10,10 +10,10 @@
 ## Installs
 
 * Ubuntu 22.04 LTS
-* CUDA 12.4
-* Python 3.10.12
-* Torch 2.6.0
-* xformers 0.0.29.post3
+* CUDA 12.4 / 12.8 (12.4 is the default)
+* Python 3.11.12
+* Torch 2.6.0 / 2.7.0 (2.6.0 is the default)
+* xformers 0.0.29.post3 / 0.0.30 (0.0.29.post3 is the default)
 * [Jupyter Lab](https://github.com/jupyterlab/jupyterlab)
 * [code-server](https://github.com/coder/code-server)
 * [Kohya_ss](https://github.com/bmaltais/kohya_ss) v25.2.1
@@ -48,8 +48,14 @@ wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/mai
 # Log in to Docker Hub
 docker login
 
-# Build the image, tag the image, and push the image to Docker Hub
+# Build the default image (CUDA 12.4), tag the image, and push the image to Docker Hub
 docker buildx bake -f docker-bake.hcl --push
+
+# OR build a different image (eg. CUDA 12.8), tag the image, and push the image to Docker Hub
+docker buildx bake -f docker-bake.hcl cu128-py311 --push
+
+# OR build ALL images, tag the images, and push the images to Docker Hub
+docker buildx bake -f docker-bake.hcl all --push
 
 # Same as above but customize registry/user/release:
 REGISTRY=ghcr.io REGISTRY_USER=myuser RELEASE=my-release docker buildx \
