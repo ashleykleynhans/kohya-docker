@@ -23,12 +23,15 @@
 * [rclone](https://rclone.org/)
 * [Application Manager](https://github.com/ashleykleynhans/app-manager)
 
-## Available on RunPod
+## Available on Runpod
 
-This image is designed to work on [RunPod](https://runpod.io?ref=2xxro4sy).
-You can use my custom [RunPod template](
-https://runpod.io/console/deploy?template=uajca40f1z&ref=2xxro4sy)
-to launch it on RunPod.
+This image is designed to work on [Runpod](https://runpod.io?ref=2xxro4sy).
+
+| Template Version                                                                              | Template Description                                       |
+|-----------------------------------------------------------------------------------------------|------------------------------------------------------------|
+| [CUDA 12.4 template](https://runpod.io/console/deploy?template=uajca40f1z&ref=2xxro4sy)       | Default template with CUDA 12.4 for non-RTX 5090 GPU types |
+| [CUDA 12.8 template](https://runpod.io/console/deploy?template=8y5a02q55r&ref=2xxro4sy) | Default template with CUDA 12.8 for RTX 5090 GPU type      |
+
 
 ## Building the Docker image
 
@@ -95,7 +98,7 @@ You can obviously substitute the image name and tag with your own.
 | 8000         | 8000          | Application Manager  |
 | 7777         | 7777          | Code Server          |
 | 8888         | 8888          | Jupyter Lab          |
-| 2999         | 2999          | RunPod File Uploader |
+| 2999         | 2999          | Runpod File Uploader |
 
 ## Environment Variables
 
@@ -103,7 +106,7 @@ You can obviously substitute the image name and tag with your own.
 |----------------------|--------------------------------------------------|-----------------------|
 | JUPYTER_LAB_PASSWORD | Set a password for Jupyter lab                   | not set - no password |
 | DISABLE_AUTOLAUNCH   | Disable Kohya_ss from launching automatically    | (not set)             |
-| DISABLE_SYNC         | Disable syncing if using a RunPod network volume | (not set)             |
+| DISABLE_SYNC         | Disable syncing if using a Runpod network volume | (not set)             |
 | ENABLE_TENSORBOARD   | Enables Tensorboard on port 6006                 | enabled               |
 
 ## Logs
