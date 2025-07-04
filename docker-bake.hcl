@@ -56,7 +56,7 @@ target "cu128-py311" {
     tags = ["${REGISTRY}/${REGISTRY_USER}/${APP}:${RELEASE}.post1"]
     args = {
         RELEASE             = "${RELEASE}"
-        BASE_IMAGE          = "${BASE_IMAGE_REPOSITORY}:${BASE_IMAGE_VERSION}-python3.10-cuda12.8.1-torch2.7.0"
+        BASE_IMAGE          = "${BASE_IMAGE_REPOSITORY}:${BASE_IMAGE_VERSION}-python3.11-cuda12.8.1-torch2.7.0"
         INDEX_URL           = "https://download.pytorch.org/whl/cu128"
         TORCH_VERSION       = "2.7.0+cu128"
         XFORMERS_VERSION    = "0.0.30"
