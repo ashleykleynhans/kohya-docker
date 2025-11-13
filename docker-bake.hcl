@@ -23,7 +23,7 @@ variable "BASE_IMAGE_REPOSITORY" {
 }
 
 variable "BASE_IMAGE_VERSION" {
-    default = "2.4.2"
+    default = "2.4.9"
 }
 
 group "default" {
@@ -61,6 +61,6 @@ target "cu128-py311" {
         TORCH_VERSION       = "2.7.0+cu128"
         XFORMERS_VERSION    = "0.0.30"
         KOHYA_VERSION       = "v${RELEASE}"
-        APP_MANAGER_VERSION = "1.2.2"
+        APP_MANAGER_VERSION = "1.3.0"
     }
 }
