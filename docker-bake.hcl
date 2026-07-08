@@ -11,7 +11,7 @@ variable "APP" {
 }
 
 variable "RELEASE" {
-    default = "25.2.1"
+    default = "25.2.2"
 }
 
 variable "CU_VERSION" {
@@ -23,7 +23,11 @@ variable "BASE_IMAGE_REPOSITORY" {
 }
 
 variable "BASE_IMAGE_VERSION" {
-    default = "2.4.9"
+    default = "2.4.19"
+}
+
+variable "APP_MANAGER_VERSION" {
+    default = "2.0.0"
 }
 
 group "default" {
@@ -47,7 +51,7 @@ target "cu124-py311" {
         TORCH_VERSION       = "2.6.0+cu124"
         XFORMERS_VERSION    = "0.0.29.post3"
         KOHYA_VERSION       = "v${RELEASE}"
-        APP_MANAGER_VERSION = "1.2.2"
+        APP_MANAGER_VERSION = "${APP_MANAGER_VERSION}"
     }
 }
 
@@ -61,6 +65,6 @@ target "cu128-py311" {
         TORCH_VERSION       = "2.7.0+cu128"
         XFORMERS_VERSION    = "0.0.30"
         KOHYA_VERSION       = "v${RELEASE}"
-        APP_MANAGER_VERSION = "1.3.0"
+        APP_MANAGER_VERSION = "${APP_MANAGER_VERSION}"
     }
 }

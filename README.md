@@ -16,12 +16,12 @@
 * xformers 0.0.29.post3 / 0.0.30 (0.0.29.post3 is the default)
 * [Jupyter Lab](https://github.com/jupyterlab/jupyterlab)
 * [code-server](https://github.com/coder/code-server)
-* [Kohya_ss](https://github.com/bmaltais/kohya_ss) v25.2.1
+* [Kohya_ss](https://github.com/bmaltais/kohya_ss) v25.2.2
 * [runpodctl](https://github.com/runpod/runpodctl)
 * [OhMyRunPod](https://github.com/kodxana/OhMyRunPod)
 * [RunPod File Uploader](https://github.com/kodxana/RunPod-FilleUploader)
 * [rclone](https://rclone.org/)
-* [Application Manager](https://github.com/ashleykleynhans/app-manager)
+* [Application Manager](https://github.com/ashleykleynhans/app-manager) 2.0.0
 
 ## Available on Runpod
 
