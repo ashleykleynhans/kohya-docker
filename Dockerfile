@@ -26,11 +26,21 @@ ARG XFORMERS_VERSION
 WORKDIR /kohya_ss
 COPY kohya_ss/requirements* ./
 COPY --chmod=755 kohya_ss/gui.sh ./
-RUN python3 -m venv --system-site-packages /venv && \
-    source /venv/bin/activate && \
+RUN python3 -m venv --system-site-packages /venv
+
+RUN source /venv/bin/activate && \
     pip3 install torch==${TORCH_VERSION} torchvision torchaudio --index-url ${INDEX_URL} && \
+    deactivate
+
+RUN source /venv/bin/activate && \
     pip3 install xformers==${XFORMERS_VERSION} --index-url ${INDEX_URL} && \
+    deactivate
+
+RUN source /venv/bin/activate && \
     pip3 install tensorflow[and-cuda] && \
+    deactivate
+
+RUN source /venv/bin/activate && \
     pip3 install -r requirements_runpod.txt && \
     deactivate
 

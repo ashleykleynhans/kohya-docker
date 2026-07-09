@@ -133,6 +133,11 @@ jobs:
           REGISTRY: ghcr.io
           REGISTRY_USER: ${{ github.repository_owner }}
         run: |
+          # Clean up any previous build cache to free disk space
+          docker buildx prune -af
+          docker system prune -af --volumes
+          df -h
+
           # Build images one at a time to avoid resource exhaustion
 
           echo "Building cu124-py311..."
