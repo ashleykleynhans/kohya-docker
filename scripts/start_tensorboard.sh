@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 export PYTHONUNBUFFERED=1
 echo "TENSORBOARD: Starting Tensorboard"
+source /venv/bin/activate
 cd /workspace
 mkdir -p /workspace/logs/ti
 mkdir -p /workspace/logs/dreambooth

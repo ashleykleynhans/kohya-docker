@@ -44,14 +44,8 @@ RUN source /venv/bin/activate && \
     pip3 install -r requirements_runpod.txt && \
     deactivate
 
-# Stage 3: Tensorboard Installation
-FROM kohya-install AS tensorboard-install
-WORKDIR /
-RUN pip3 uninstall -y tensorboard tb-nightly && \
-    pip3 install tensorboard==2.15.2 tensorflow==2.15.0.post1
-
-# Stage 4: Application Manager Installation
-FROM tensorboard-install AS appmanager-install
+# Stage 3: Application Manager Installation
+FROM kohya-install AS appmanager-install
 ARG APP_MANAGER_VERSION
 WORKDIR /
 RUN git clone https://github.com/ashleykleynhans/app-manager.git /app-manager && \
